@@ -284,15 +284,15 @@
   <section id="view-dialogue" class="hidden space-y-6 animate-fade-in">
     <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
       <h2 class="text-2xl font-bold text-gray-800 mb-6">Echoes: Dialogue Archive</h2>
-      <p class="text-gray-600 mb-6">Explore key interactions throughout the story's history. Filter by character to see their evolution.</p>
+      <p class="text-gray-600 mb-6">Explore key interactions, archive markings, and character catchphrases throughout the story.</p>
 
       <!-- Filters -->
-      <div class="flex gap-2 mb-6 overflow-x-auto pb-2">
+      <div class="flex gap-2 mb-6 overflow-x-auto pb-2 flex-wrap">
         <button onclick="filterDialogue('all')" class="px-4 py-1.5 rounded-full bg-gray-800 text-white text-sm font-medium hover:bg-gray-700 transition-colors">All</button>
         <button onclick="filterDialogue('Momo')" class="px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors">Momo</button>
         <button onclick="filterDialogue('Bakugo')" class="px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors">Bakugo</button>
-        <button onclick="filterDialogue('Mina')" class="px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors">Mina</button>
-        <button onclick="filterDialogue('Hanta')" class="px-4 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors">Hanta</button>
+        <button onclick="filterDialogue('fun')" class="px-4 py-1.5 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium hover:bg-yellow-200 transition-colors border border-yellow-200">Catchphrases</button>
+        <button onclick="filterDialogue('marking')" class="px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium hover:bg-indigo-200 transition-colors border border-indigo-200">Markings</button>
       </div>
 
       <!-- Dialogue List -->
