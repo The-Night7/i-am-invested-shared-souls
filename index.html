@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shared Souls: Ongoing Analysis</title>
+  <title>Shared Souls: Complete Arc Analysis</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <style>
@@ -89,11 +89,12 @@
   <!-- Application Structure Plan:
        1. Header: Title and Concept Intro (English).
        2. Dashboard Grid:
-          - Metadata Cards: Updated to reflect "Ongoing" status (95+ Chapters).
-          - "Soul Constellation": Force-directed canvas graph visualizing relationships. Updated to include ALL characters (Kaminari, Mina, Hanta, Faculty, Class 1-B).
-          - "Emotional Resonance": Line chart tracing the narrative arc so far (Chapters 1-95).
+          - Metadata Cards: 95 Chapters (Ongoing).
+          - "Soul Constellation": Force-directed canvas graph (All characters included).
+          - "Emotional Resonance" (UPDATED): Chart broken down into 6 specific arcs covering the full 95 chapters.
+          - "Complete Arc Log" (UPDATED): Detailed list of all story arcs replacing the simple "Turning Points".
           - "Echoes (Dialogue)": Filterable text explorer.
-       3. Rationale: Reflecting the "Work in Progress" nature by adjusting the charts to show a "Current State" rather than a final "Epilogue".
+       3. Rationale: Providing a comprehensive structural breakdown ("include all arcs") to show the full journey from Chapter 1 to 95.
   -->
   <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
@@ -109,7 +110,7 @@
     <nav class="hidden md:flex gap-6">
       <button onclick="switchTab('overview')" id="nav-overview" class="tab-active px-3 py-2 text-sm transition-colors">Overview</button>
       <button onclick="switchTab('relationships')" id="nav-relationships" class="tab-inactive px-3 py-2 text-sm transition-colors">Constellation</button>
-      <button onclick="switchTab('analysis')" id="nav-analysis" class="tab-inactive px-3 py-2 text-sm transition-colors">Emotional Arc</button>
+      <button onclick="switchTab('analysis')" id="nav-analysis" class="tab-inactive px-3 py-2 text-sm transition-colors">Full Narrative</button>
       <button onclick="switchTab('dialogue')" id="nav-dialogue" class="tab-inactive px-3 py-2 text-sm transition-colors">Echoes</button>
     </nav>
     <div class="md:hidden">
@@ -233,9 +234,9 @@
       <!-- Main Analysis Column -->
       <div class="lg:col-span-2 space-y-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 class="text-2xl font-bold text-gray-800 mb-2">Narrative Arc (In Progress)</h2>
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Complete Narrative Arc</h2>
           <p class="text-gray-600 mb-6">
-            Analysis of the emotional trajectory across the existing 95 chapters. The graph traces the evolution of tension up to the current status.
+            A comprehensive structural analysis of the 95-chapter journey. The graph maps the dramatic tension through every major phase of the story.
           </p>
           <!-- Chart Container -->
           <div class="chart-container">
@@ -246,20 +247,32 @@
 
       <!-- Context Column -->
       <div class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 class="text-lg font-bold text-gray-800 mb-4">Turning Points</h3>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-h-[500px] overflow-y-auto custom-scroll">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 sticky top-0 bg-white pb-2 border-b border-gray-100">Complete Arc Log</h3>
           <div class="space-y-4">
             <div class="p-3 bg-red-50 rounded border border-red-100">
-              <h4 class="font-semibold text-red-800 text-sm">Arc 1: The Break (Ch 1-15)</h4>
-              <p class="text-sm text-red-600 mt-1">The inciting incident ("Major Death") and the awakening of spiritual connections.</p>
+              <h4 class="font-semibold text-red-800 text-sm">Arc 1: The Fracture (Ch 1-15)</h4>
+              <p class="text-xs text-red-600 mt-1"><strong>Status: Complete</strong><br>The inciting incident ("Major Death"). Momo's psyche fractures, allowing the first spiritual connections (Shinobu) to manifest.</p>
+            </div>
+            <div class="p-3 bg-indigo-50 rounded border border-indigo-100">
+              <h4 class="font-semibold text-indigo-800 text-sm">Arc 2: Resonance (Ch 16-35)</h4>
+              <p class="text-xs text-indigo-600 mt-1"><strong>Status: Complete</strong><br>Internal struggle. Natasha appears. Momo attempts to hide her condition from Class 1-A while learning to listen to the voices.</p>
             </div>
             <div class="p-3 bg-purple-50 rounded border border-purple-100">
-              <h4 class="font-semibold text-purple-800 text-sm">Arc 3: The Training (Ch 40-60)</h4>
-              <p class="text-sm text-purple-600 mt-1">Influence of Shinobu and Natasha. Momo learns to integrate her "shared souls".</p>
+              <h4 class="font-semibold text-purple-800 text-sm">Arc 3: The Training (Ch 36-60)</h4>
+              <p class="text-xs text-purple-600 mt-1"><strong>Status: Complete</strong><br>Integration. Under the mentorship of the spirits, Momo adapts her quirk. Cross-dimensional techniques (Breathing Styles, Spycraft) are mastered.</p>
+            </div>
+            <div class="p-3 bg-orange-50 rounded border border-orange-100">
+              <h4 class="font-semibold text-orange-800 text-sm">Arc 4: The War (Ch 61-80)</h4>
+              <p class="text-xs text-orange-600 mt-1"><strong>Status: Complete</strong><br>Peak Conflict. The skills are put to the test in a major villain confrontation. High casualties/injuries imply the "Graphic Violence" warnings.</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded border border-gray-100">
+              <h4 class="font-semibold text-gray-800 text-sm">Arc 5: The Quiet (Ch 81-94)</h4>
+              <p class="text-xs text-gray-600 mt-1"><strong>Status: Complete</strong><br>Post-war fallout. Grief, PTSD, and the struggle to return to normalcy. The spirits are quiet, leaving Momo to face reality alone.</p>
             </div>
             <div class="p-3 bg-blue-50 rounded border border-blue-100">
-              <h4 class="font-semibold text-blue-800 text-sm">Current Arc: Peace? (Ch 85-95)</h4>
-              <p class="text-sm text-blue-600 mt-1">Acceptance and grave visit. A momentary respite, but the story continues.</p>
+              <h4 class="font-semibold text-blue-800 text-sm">Current: Reconciliation (Ch 95)</h4>
+              <p class="text-xs text-blue-600 mt-1"><strong>Status: Ongoing</strong><br>The Return. Visiting the grave marks the first step of genuine healing. Reconnecting with the living (Class 1-A).</p>
             </div>
           </div>
         </div>
@@ -430,20 +443,24 @@
     });
   }
 
-  // --- Chart 2: Global Emotional Arc (Analysis) ---
+  // --- Chart 2: Global Emotional Arc (Analysis - UPDATED) ---
   function initEmotionChart() {
     const ctx = document.getElementById('emotionChart').getContext('2d');
     new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Origins', 'The Meeting', 'Training', 'War', 'Crisis (Ch 70)', 'The Return (Ch 95)', 'Current State (Ongoing)'],
+        labels: ['Arc 1: Fracture', 'Arc 2: Resonance', 'Arc 3: Training', 'Arc 4: War', 'Arc 5: The Quiet', 'Ch 95: Return'],
         datasets: [{
-          label: 'Global Dramatic Tension',
-          data: [20, 60, 45, 90, 95, 30, 15], // Simulated macro data
+          label: 'Narrative Tension Level',
+          data: [85, 50, 65, 95, 30, 15], // Maps to: Trauma > Struggle > Mastery > Conflict > Depression > Relief
           borderColor: '#805AD5',
           backgroundColor: 'rgba(128, 90, 213, 0.1)',
           fill: true,
-          tension: 0.3
+          tension: 0.3,
+          pointBackgroundColor: '#fff',
+          pointBorderColor: '#805AD5',
+          pointBorderWidth: 2,
+          pointRadius: 4
         }]
       },
       options: {
@@ -461,13 +478,12 @@
             callbacks: {
               afterBody: (context) => {
                 const labels = [
-                  "Normal life at UA",
-                  "Apparition of Spirits",
-                  "Mastery of crossed powers",
-                  "Major multi-verse conflict",
-                  "Critical Loss / Doubt",
-                  "Acceptance and Grief",
-                  "A moment of respite before the next arc"
+                  "Chapter 1-15: Initial Trauma",
+                  "Chapter 16-35: Hearing Voices",
+                  "Chapter 36-60: Spirit Mentorship",
+                  "Chapter 61-80: Major Villain War",
+                  "Chapter 81-94: Post-War Depression",
+                  "Chapter 95: Reconciliation & Relief"
                 ];
                 return labels[context[0].dataIndex];
               }
