@@ -1,0 +1,350 @@
+[
+  {
+    "id": "origins",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Origins Arc",
+    "chapters": [1, 6],
+    "summary": "Momo's early life at the Yaoyorozu estate. Quirk manifests at four. Dreams begin at ten — Shinobu's wisteria garden, then Natasha's blood-soaked missions. At twelve the vestiges appear physically in her bedroom. She enrolls in a private academy; social isolation. The shared-soul concept is formally explained.",
+    "tension": 30,
+    "key_events": [
+      "First vestige dreams: Shinobu's wisteria garden (Ch 1)",
+      "Natasha's blood-soaked missions appear (Ch 2)",
+      "Vestiges manifest visibly in Momo's bedroom (Ch 3)",
+      "Shared soul concept explained: 'Three separate lives, one connected soul' (Ch 3)"
+    ],
+    "color": "#9F7AEA"
+  },
+  {
+    "id": "quirk_test",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Quirk Apprehension Test Arc",
+    "chapters": [7, 7],
+    "summary": "Momo enters U.A. High School. Meets Class 1-A for the first time: Iida, Tokoyami, Sero, Kaminari, Jirou, Ochako, Deku, Shouto. Shinobu notes Shouto reminds her of Tomioka.",
+    "tension": 35,
+    "key_events": [
+      "Momo enters U.A. (Ch 7)",
+      "Meets Class 1-A",
+      "Shinobu/Giyuu ↔ Momo/Shouto parallel established"
+    ],
+    "color": "#4299E1"
+  },
+  {
+    "id": "battle_trial",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Battle Trial Arc",
+    "chapters": [8, 9],
+    "summary": "Indoor battle training. Momo begins showing restrained vestige-enhanced capabilities for the first time in combat.",
+    "tension": 40,
+    "key_events": [],
+    "color": "#48BB78"
+  },
+  {
+    "id": "usj",
+    "saga": "U.A. Beginnings Saga",
+    "name": "U.S.J. Arc",
+    "chapters": [9, 12],
+    "summary": "League of Villains attacks U.S.J. The class faces real combat for the first time. Momo deliberately holds back her true speed and strength to avoid suspicion from classmates.",
+    "tension": 70,
+    "key_events": [
+      "League of Villains attacks U.S.J.",
+      "Momo conceals Vestige-enhanced speed",
+      "All Might arrives (Ch 11)"
+    ],
+    "color": "#ED8936"
+  },
+  {
+    "id": "sports_festival",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Sports Festival Arc",
+    "chapters": [13, 21],
+    "summary": "Momo wins the First Year tournament, defeating Bakugou in the final using judo-based restraint. Shouto begins using his left side in the semifinals. All Might calls her a future legend. Shouto visits his hospitalised mother.",
+    "tension": 65,
+    "key_events": [
+      "Momo wins entire tournament (Ch 21)",
+      "Defeats Bakugou with his own momentum — pins him with one foot",
+      "All Might: 'I believe you will one day become one of the greatest Heroes of your generation.'",
+      "Shouto uses his left side (fire) for the first time (Ch 18)",
+      "Momo embraces Shouto post-ceremony; tells him he'll be great 'separate from your father's legacy' (Ch 21)"
+    ],
+    "color": "#F6E05E"
+  },
+  {
+    "id": "hero_killer",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Hero Killer Arc",
+    "chapters": [22, 26],
+    "summary": "Internships. Momo co-interns with Tokage Setsuna (Class 1-B). Hero Killer Stain encounter. Ch 23: 'Bizarre! Tokage Setsuna Appears.'",
+    "tension": 60,
+    "key_events": [
+      "Setsuna introduced as co-intern (Ch 23)",
+      "Hero Killer Stain arc",
+      "Competitive banter between Momo and Setsuna throughout"
+    ],
+    "color": "#FC8181"
+  },
+  {
+    "id": "final_exams",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Final Exams Arc",
+    "chapters": [26, 30],
+    "summary": "End-of-year exams. Momo and Shouto are paired together (canon from manga). 'Wonder Duo; Rising' (Ch 30).",
+    "tension": 50,
+    "key_events": [
+      "Momo & Shouto paired (Ch 30: Wonder Duo; Rising)"
+    ],
+    "color": "#9F7AEA"
+  },
+  {
+    "id": "training_camp",
+    "saga": "U.A. Beginnings Saga",
+    "name": "Training Camp Arc",
+    "chapters": [31, 35],
+    "summary": "Wild Wild Pussycats. A Test of Courage (Ch 33). 'My Heroes' (Ch 34). Villains attack the camp — Roaring Upheaval (Ch 35).",
+    "tension": 75,
+    "key_events": [
+      "Wild Wild Pussycats introduced (Ch 32)",
+      "Test of Courage (Ch 33)",
+      "My Heroes (Ch 34)",
+      "Villain attack on camp: Roaring Upheaval (Ch 35)"
+    ],
+    "color": "#48BB78"
+  },
+  {
+    "id": "hideout_raid",
+    "saga": "Rise of Villains Saga",
+    "name": "Hideout Raid Arc",
+    "chapters": [36, 38],
+    "summary": "All Might vs All For One. The Symbol of Peace falls publicly. The entire Hero society is shaken. 'End of the Beginning, Beginning of the End' (Ch 38).",
+    "tension": 95,
+    "key_events": [
+      "All Might defeats All For One (Ch 37)",
+      "End of the Symbol of Peace era (Ch 38)"
+    ],
+    "color": "#E53E3E"
+  },
+  {
+    "id": "revelations",
+    "saga": "Rise of Villains Saga",
+    "name": "Revelations Arc",
+    "chapters": [38, 39],
+    "summary": "Moving into U.A. dorms. Emotional aftermath of the Hideout Raid. The class processes the shift in Hero society.",
+    "tension": 45,
+    "key_events": [
+      "Moving into dorms (Ch 39)"
+    ],
+    "color": "#A0AEC0"
+  },
+  {
+    "id": "provisional_exam",
+    "saga": "Rise of Villains Saga",
+    "name": "Provisional Hero License Exam Arc",
+    "chapters": [40, 43],
+    "summary": "Hero License exams. Ultimate Moves development (Ch 40). Do-or-Die survival training (Ch 41). The Test (Ch 42).",
+    "tension": 60,
+    "key_events": [
+      "Create Those Ultimate Moves (Ch 40)",
+      "Make It! Do-or-Die Survival Training (Ch 41)",
+      "License exam (Ch 42–43)"
+    ],
+    "color": "#68D391"
+  },
+  {
+    "id": "shie_hassaikai",
+    "saga": "Rise of Villains Saga",
+    "name": "Shie Hassaikai Arc",
+    "chapters": [44, 49],
+    "summary": "The Yakuza arc. Eri's rescue. Momo's first encounter with Kurohana — left hand crushed, nearly killed. Her first real brush with a villain obsessed with her specifically. 'Creati(on)' (Ch 48).",
+    "tension": 90,
+    "key_events": [
+      "Eri first encountered (Ch 44–45)",
+      "Momo first meets Kurohana; throne of corpses (Ch 47)",
+      "Kurohana crushes Momo's hand; leaves her for dead (Ch 48)",
+      "Momo refuses to give her name: 'I'm The Everything Hero: Creati.' (Ch 48)",
+      "Eri rescued (Ch 49)"
+    ],
+    "color": "#2D3748"
+  },
+  {
+    "id": "remedial",
+    "saga": "Rise of Villains Saga",
+    "name": "Remedial Course Arc",
+    "chapters": [50, 50],
+    "summary": "Win Those Kids' Hearts for Relief (Ch 50). Brief breather arc. Momo processes the Kurohana encounter.",
+    "tension": 25,
+    "key_events": [],
+    "color": "#B794F4"
+  },
+  {
+    "id": "school_festival",
+    "saga": "Rise of Villains Saga",
+    "name": "School Festival Arc",
+    "chapters": [51, 54],
+    "summary": "Gold Tips Imperial tea performance (Ch 52). Momo and Deku vs Gentle Criminal (Ch 53). Festival performance (Ch 54). Light-hearted arc before the storm.",
+    "tension": 40,
+    "key_events": [
+      "Gold Tips Imperial (Ch 52)",
+      "Deku & Creati vs Gentle Criminal (Ch 53)",
+      "Let It Flow! School Festival Start!! (Ch 54)"
+    ],
+    "color": "#F6AD55"
+  },
+  {
+    "id": "hellish_obsession",
+    "saga": "Fated Battles Saga",
+    "name": "Hellish Obsession Arc",
+    "chapters": [55, 59],
+    "summary": "Billboard Chart arc. Dabi's Dance — Touya's public unmasking (Ch 57). Hellish Hell (Ch 58). Kurohana's obsession with Momo intensifies and becomes explicit. All Hands on Deck (Ch 59).",
+    "tension": 85,
+    "key_events": [
+      "Japanese Hero Billboard Chart (Ch 55)",
+      "Dabi publicly unmasked as Todoroki Touya: 'Dabi's Dance' (Ch 57)",
+      "Kurohana's obsession made explicit (Ch 58)",
+      "All Hands on Deck (Ch 59)"
+    ],
+    "color": "#E53E3E"
+  },
+  {
+    "id": "joint_training",
+    "saga": "Fated Battles Saga",
+    "name": "Joint Training Arc",
+    "chapters": [60, 66],
+    "summary": "Class 1-A vs Class 1-B. Shinsou joins the Hero Course. 'Set Your Soul (and Heart) Ablaze!!!' (Ch 63). Kacchan vs Yaomomo rematch (Ch 65). New Power, New Bonds, and Old Faces (Ch 66).",
+    "tension": 70,
+    "key_events": [
+      "Shinsou integration (Ch 60–61)",
+      "Set Your Soul Ablaze (Ch 63)",
+      "Kacchan vs Yaomomo rematch (Ch 65)",
+      "New Power, New Bonds (Ch 66)"
+    ],
+    "color": "#68D391"
+  },
+  {
+    "id": "endeavor_agency",
+    "saga": "Fated Battles Saga",
+    "name": "Endeavor Agency Arc",
+    "chapters": [67, 70],
+    "summary": "Work-study under Endeavor. Christmas chapter (Ch 67). Antagonistic Izakaya (Ch 68). One Thing at a Time (Ch 69). The Unforgiven (Ch 70). Shouto processes his family's shadow.",
+    "tension": 55,
+    "key_events": [
+      "Have a Merry Christmas! (Ch 67)",
+      "Antagonistic Izakaya (Ch 68)",
+      "The Unforgiven (Ch 70)"
+    ],
+    "color": "#4299E1"
+  },
+  {
+    "id": "world_heroes_mission",
+    "saga": "Fated Battles Saga",
+    "name": "World Heroes' Mission Arc",
+    "chapters": [71, 75],
+    "summary": "Otheon mission (Ch 72). On the Run (Ch 73). Race Against Time (Ch 74). World Heroes' Mission conclusion (Ch 75). Star and Stripe introduced.",
+    "tension": 80,
+    "key_events": [
+      "Endeavor's Mission (Ch 71)",
+      "Otheon (Ch 72)",
+      "Star and Stripe introduced",
+      "Race Against Time (Ch 74)"
+    ],
+    "color": "#F6AD55"
+  },
+  {
+    "id": "loss",
+    "saga": "Fated Battles Saga",
+    "name": "Loss Arc",
+    "chapters": [76, 76],
+    "summary": "A single devastating chapter. Kurohana orchestrates Dabi burning the Yaoyorozu mansion. Ekaterina dies. Momo's breakdown is broadcast live nationwide. Shouto races to her side. She refuses food and drink for three days. Skips her mother's funeral.",
+    "tension": 100,
+    "key_events": [
+      "Dabi-blue fire burns the Yaoyorozu mansion",
+      "Ekaterina killed",
+      "Momo's breakdown broadcast live — class watches in shock",
+      "Shouto races to her; ice-suppresses the flames; holds her",
+      "Momo refuses food/drink for 3 days; skips the funeral",
+      "Class deduces Kurohana's motive: isolate Momo by taking everything"
+    ],
+    "color": "#E53E3E"
+  },
+  {
+    "id": "rogue",
+    "saga": "Fated Battles Saga",
+    "name": "Rogue Heroine Arc",
+    "chapters": [77, 80],
+    "summary": "Momo goes AWOL. Friends search for her (Ch 78–79). 'Creati vs U.A. Hero Course' (Ch 80) — she fights her own classmates. The emotional nadir of the story.",
+    "tension": 90,
+    "key_events": [
+      "Momo disappears (Ch 77)",
+      "Class searches: Clues (Ch 78), Found (Ch 79)",
+      "Momo fights her own classmates: Creati vs U.A. Hero Course (Ch 80)"
+    ],
+    "color": "#A0AEC0"
+  },
+  {
+    "id": "preparation",
+    "saga": "Justice Saga",
+    "name": "Preparation Arc",
+    "chapters": [81, 85],
+    "summary": "Solace (Ch 81). Return (Ch 82). Allies (Ch 83). Wind Breathing introduced (Ch 84). Momo rebuilds herself piece by piece. Giyuu training begins.",
+    "tension": 40,
+    "key_events": [
+      "Solace (Ch 81)",
+      "Momo returns to class (Ch 82)",
+      "New allies formed (Ch 83)",
+      "Wind Breathing introduced (Ch 84)",
+      "Into the Endless Mansion (Ch 85)"
+    ],
+    "color": "#68D391"
+  },
+  {
+    "id": "endless_mansion",
+    "saga": "Justice Saga",
+    "name": "Endless Mansion Arc",
+    "chapters": [86, 94],
+    "summary": "The climax. Assassins (Ch 86). Shinobu revealed fully as Insect Hashira (Ch 87). The Lunatic (Ch 88). Shifting Structure (Ch 89). Flashfires (Ch 90). Rage (Ch 91). Life Passing Before One's Eyes (Ch 92). Momo's Demon Slayer Mark activates. She loses her left arm. Meets Ekaterina's echo in her mindscape (Ch 93). Todoroki Family reckoning (Ch 94).",
+    "tension": 98,
+    "key_events": [
+      "Assassins encountered (Ch 86)",
+      "Shinobu revealed fully as Insect Hashira (Ch 87)",
+      "Momo's Demon Slayer Mark activates",
+      "Momo loses her left arm in combat",
+      "Ekaterina's soul-echo in Momo's mindscape: 'Stand up. You still have something left to do.' (Ch 93)",
+      "Kurohana defeated (Ch 93)",
+      "Todoroki family confronted publicly (Ch 94)",
+      "Endeavor's crimes officially confirmed (Ch 94)"
+    ],
+    "color": "#E53E3E"
+  },
+  {
+    "id": "onwards",
+    "saga": "Justice Saga",
+    "name": "Onward Arc",
+    "chapters": [94, 94],
+    "summary": "Transitional chapter contained within Ch 94. The Hellish Todoroki Family aftermath. Hero Society begins processing the truth about Endeavor.",
+    "tension": 50,
+    "key_events": [
+      "Todoroki family reckoning",
+      "Endeavor charges confirmed publicly"
+    ],
+    "color": "#4299E1"
+  },
+  {
+    "id": "decompress",
+    "saga": "Justice Saga",
+    "name": "Decompress Arc",
+    "chapters": [95, 97],
+    "summary": "Move Forward, Even If Just a Little (Ch 95). Momo visits her mother's grave. Class worries; Katsuki scolds her protectively. Hawks becomes Number One. Lady Nagant pardoned and appointed HPSC President. Structural reforms to Hero Society. Aizawa and Natasha caught laughing together (Ch 97). Momo trains her Demon Slayer Mark. The story ends at U.S.J. — a redo field trip for the one interrupted a year ago.",
+    "tension": 15,
+    "key_events": [
+      "Momo visits Ekaterina's grave for the first time (Ch 95)",
+      "Sero: 'You absolute dumbass, you can't just disappear like that!' (Ch 95)",
+      "Bakugou: 'Next time, check your damn phone.' (Ch 95)",
+      "'Todoroki, Do You Have Feelings for Yaomomo?' (Ch 96)",
+      "Hawks formally announced as Number One Hero (Ch 97)",
+      "Lady Nagant pardoned; appointed HPSC President (Ch 97)",
+      "Systemic HPSC corruption exposed; former President arrested (Ch 97)",
+      "Aizawa and Natasha caught laughing together (Ch 97)",
+      "Momo trains her Mark with Shinobu and Giyuu in extreme heat (Ch 97)",
+      "USJ redo field trip — 'For the first time in a long while, she felt like a teenager again.' (Ch 97)"
+    ],
+    "color": "#9F7AEA"
+  }
+]

@@ -23,19 +23,19 @@
 
 <main class="container page-wrap">
   <div class="page-header">
-    <p class="eyebrow">26 Arcs · 4 Sagas · 97 Chapters</p>
+    <p class="eyebrow">25 Arcs · 4 Sagas · 97 Chapters</p>
     <h1>Arc Log</h1>
-    <p>Every arc in chronological order with summaries, key events, and narrative tension scores.</p>
+    <p>Every arc in chronological order — summaries, key events, and narrative tension scores.</p>
   </div>
 
   <div class="arcs-layout">
-    <!-- Timeline -->
     <div class="arc-timeline" id="arc-timeline"></div>
 
-    <!-- Sidebar tension chart -->
     <div class="chart-sidebar">
       <div class="card">
-        <h4 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:1rem">Narrative Tension</h4>
+        <h4 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:1rem">
+          Narrative Tension
+        </h4>
         <canvas id="tension-chart" width="230" height="440"></canvas>
         <div style="margin-top:0.8rem;display:flex;flex-direction:column;gap:0.35rem;font-size:0.72rem;color:var(--text-faint)">
           <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#F56565;border-radius:2px;display:inline-block"></span>≥ 90 — Crisis</span>
@@ -51,68 +51,10 @@
 <footer>
   <div class="container inner">
     <span>Shared Souls · Arc Log</span>
-    <span><a href="../index.html" style="color:var(--text-faint)">← Back to Overview</a></span>
+    <span><a href="../index.html" style="color:var(--text-faint)">← Overview</a></span>
   </div>
 </footer>
 
-<script type="module">
-import { ARCS } from '../data/characters.js';
-
-// ── Build timeline ────────────────────────────────────────────
-const container = document.getElementById('arc-timeline');
-container.innerHTML = ARCS.map(arc => {
-  const chRange = arc.chapters[0] === arc.chapters[1] ? `Ch ${arc.chapters[0]}` : `Ch ${arc.chapters[0]}–${arc.chapters[1]}`;
-  const t = arc.tension || 0;
-  const tc = t >= 90 ? '#F56565' : t >= 70 ? '#ED8936' : t >= 45 ? '#9F7AEA' : '#48BB78';
-  const events = (arc.key_events || []).map(e => `<div class="arc-event">${e}</div>`).join('');
-  return `
-    <div class="arc-item" style="--arc-color:${arc.color || '#A0AEC0'}">
-      <div class="arc-ch">${chRange}</div>
-      <div class="arc-body">
-        <div class="arc-saga">${arc.saga}</div>
-        <div class="arc-name">${arc.name}</div>
-        <div class="arc-summary">${arc.summary}</div>
-        ${events ? `<div class="arc-events" style="margin-top:0.45rem">${events}</div>` : ''}
-        <div class="tension-bar-wrap">
-          <div class="tension-row"><span>Tension</span><span>${t}%</span></div>
-          <div class="tension-bar"><div class="tension-fill" style="width:${t}%;background:${tc}"></div></div>
-        </div>
-      </div>
-    </div>`;
-}).join('');
-
-// ── Tension mini chart (canvas) ───────────────────────────────
-const canvas = document.getElementById('tension-chart');
-const ctx = canvas.getContext('2d');
-const W = canvas.width, H = canvas.height;
-const pad = { t: 8, b: 24, l: 6, r: 6 };
-const chartH = H - pad.t - pad.b;
-const barW = (W - pad.l - pad.r) / ARCS.length;
-
-ARCS.forEach((arc, i) => {
-  const t = arc.tension || 0;
-  const bH = (t / 100) * chartH;
-  const x = pad.l + i * barW;
-  const y = pad.t + chartH - bH;
-  const col = t >= 90 ? '#F56565' : t >= 70 ? '#ED8936' : t >= 45 ? '#9F7AEA' : '#48BB78';
-  ctx.fillStyle = col + '44';
-  ctx.fillRect(x + 0.5, y, barW - 1, bH);
-  ctx.fillStyle = col;
-  ctx.fillRect(x + 0.5, y, barW - 1, 2);
-  if (i % 5 === 0) {
-    ctx.fillStyle = 'rgba(160,160,170,0.45)';
-    ctx.font = '7px DM Sans';
-    ctx.textAlign = 'center';
-    ctx.fillText(arc.chapters[0], x + barW / 2, H - 6);
-  }
-});
-// Axis line
-ctx.beginPath();
-ctx.moveTo(pad.l, pad.t + chartH);
-ctx.lineTo(W - pad.r, pad.t + chartH);
-ctx.strokeStyle = 'rgba(255,255,255,0.06)';
-ctx.lineWidth = 1;
-ctx.stroke();
-</script>
+<script src="../js/arcs.js"></script>
 </body>
 </html>

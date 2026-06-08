@@ -1,6 +1,6 @@
 # Shared Souls — Fan Reference Site
 
-> Interactive reference for *Shared Souls* by Arcnote · AO3 #71180021
+> *Shared Souls* by Arcnote · AO3 #71180021  
 > 97 chapters · 256,505 words · Completed 2026-01-20
 
 ---
@@ -10,126 +10,124 @@
 ```
 shared-souls/
 │
-├── index.html                  ← Overview / homepage
+├── index.html                   ← Homepage / Overview
 │
 ├── pages/
-│   ├── characters.html         ← 22 character profiles (filterable, detail panel)
-│   ├── arcs.html               ← 26-arc timeline + tension chart
-│   ├── constellation.html      ← Force-directed relationship graph
-│   └── echoes.html             ← Key quotes (filterable by speaker)
+│   ├── characters.html          ← Character grid + detail panel
+│   ├── arcs.html                ← Arc timeline + tension chart
+│   ├── constellation.html       ← Force-directed relationship graph
+│   └── echoes.html              ← Key quotes, filterable by speaker
 │
 ├── css/
-│   └── style.css               ← All styles (CSS tokens + every component)
+│   └── style.css                ← All styles (design tokens + every component)
 │
-├── data/
-│   └── characters.js           ← ✏️  MAIN DATA FILE — edit here for all content
-│       ├── CHARACTERS{}        ← 22 full character profiles
-│       ├── ARCS[]              ← 26 arcs (summaries, tension, key events)
-│       ├── DIALOGUE[]          ← 20 key quotes with speaker/chapter/context
-│       └── RELATIONSHIPS[]     ← 23 bonds (source, target, type, strength)
+├── data/                        ← ✏️  Edit these files to update content
+│   ├── characters.json          ← 25 character profiles (array of objects)
+│   ├── arcs.json                ← 25 arcs (array of objects)
+│   ├── dialogue.json            ← 22 key quotes (array of objects)
+│   └── relationships.json       ← 23 bonds for the constellation graph
 │
 └── js/
-    └── nav.js                  ← (unused helper, kept for reference)
+    ├── characters.js            ← Logic for characters.html
+    ├── arcs.js                  ← Logic for arcs.html
+    ├── constellation.js         ← Logic for constellation.html
+    └── echoes.js                ← Logic for echoes.html
 ```
 
-> Each page is self-contained: it imports only the data it needs from `data/characters.js`
-> and handles its own JS inline. No build step needed.
+Each HTML page is pure markup — it `<link>`s one CSS file and `<script>`s one JS file.  
+All data lives in JSON. No build step, no dependencies, no modules.
 
 ---
 
-## 🔧 How to edit
+## ✏️ Editing content
 
-### ✏️ Add / update a character
+### Add / update a character — `data/characters.json`
 
-Open `data/characters.js` → `CHARACTERS` object. Each entry:
-
-```js
-my_char: {
-  id: "my_char",
-  name: "Full Name",
-  alias: "Hero Name",            // optional
-  fandom: "MHA",                 // "MHA" | "Demon Slayer" | "MCU" | "MHA (OC)"
-  role: "classmate",             // drives filter + detail label
-  color: "#48BB78",              // hex — top accent bar + constellation node
-  first_chapter: 7,
-  description: "...",
-  quirk: "...",                  // optional
-  fighting_style: "...",         // optional
-  appearance: "...",             // optional
-  key_relationships: ["momo"],   // array of other character IDs
-  notable_moments: [
-    { ch: 12, desc: "First appearance." }
+```json
+{
+  "id": "my_char",
+  "name": "Full Name",
+  "alias": "Hero Name or null",
+  "fandom": "MHA",
+  "role": "classmate",
+  "color": "#48BB78",
+  "first_chapter": 7,
+  "description": "...",
+  "quirk": "...",
+  "fighting_style": "...",
+  "appearance": "...",
+  "key_relationships": ["momo", "katsuki"],
+  "notable_moments": [
+    { "ch": 12, "desc": "First appearance." }
   ]
 }
 ```
 
-### ✏️ Add an arc
+`fandom` options: `"MHA"` · `"Demon Slayer"` · `"MCU"` · `"MHA (OC)"`
 
-`data/characters.js` → `ARCS` array:
+### Add an arc — `data/arcs.json`
 
-```js
+```json
 {
-  id: "arc_id",
-  saga: "Saga Name",
-  name: "Arc Name",
-  chapters: [firstCh, lastCh],   // same number if single chapter
-  summary: "...",
-  tension: 75,                   // 0–100 · ≥90 red · ≥70 orange · ≥45 purple · else green
-  key_events: ["Event (Ch N)"],
-  color: "#9F7AEA"               // dot colour on the timeline
+  "id": "arc_id",
+  "saga": "Saga Name",
+  "name": "Arc Name",
+  "chapters": [firstCh, lastCh],
+  "summary": "...",
+  "tension": 75,
+  "key_events": ["Event (Ch N)"],
+  "color": "#9F7AEA"
 }
 ```
 
-### ✏️ Add a quote
+`tension` 0–100: ≥90 red · ≥70 orange · ≥45 purple · <45 green
 
-`data/characters.js` → `DIALOGUE` array:
+### Add a quote — `data/dialogue.json`
 
-```js
-{ ch: 42, speaker: "momo", text: "...", context: "Ch 42 — Scene", mood: "determined" }
+```json
+{
+  "ch": 42,
+  "speaker": "momo",
+  "text": "...",
+  "context": "Ch 42 — scene description",
+  "mood": "determined"
+}
 ```
 
-Speaker IDs for colour: `momo` `shinobu` `natasha` `ekaterina` `katsuki` `hanta` `kurohana` `allMight` `narrator`
+Speaker IDs: `momo` `shinobu` `natasha` `ekaterina` `katsuki` `hanta` `kurohana` `allMight` `narrator`
 
-### ✏️ Add a relationship bond
+### Add a bond — `data/relationships.json`
 
-`data/characters.js` → `RELATIONSHIPS` array:
-
-```js
-{ source: "momo", target: "my_char", type: "ally", label: "Description", strength: 6 }
+```json
+{ "source": "momo", "target": "my_char", "type": "ally", "label": "...", "strength": 6 }
 ```
 
-`strength` 1–10 → link thickness on constellation.
-Bond type colours are in `constellation.html` → `LINK_COLORS` object.
+`strength` 1–10 → link thickness.  
+Bond type → colour mapping is in `js/constellation.js` → `LINK_COLORS`.
 
 ---
 
-## 🎨 Styling tokens
+## 🎨 Styling tokens — `css/style.css` → `:root`
 
-All design tokens in `css/style.css` → `:root`:
-
-| Variable | Purpose |
+| Token | Purpose |
 |---|---|
 | `--bg` / `--bg-card` / `--bg-hover` | Background layers |
 | `--text` / `--text-muted` / `--text-faint` | Text hierarchy |
 | `--shinobu` / `--natasha` | Vestige accent colours |
 | `--border` / `--border-hover` | Card borders |
 | `--radius` | Corner rounding |
-| `--transition` | Global easing |
+| `--transition` | Global animation easing |
 
 ---
 
 ## 🖥️ Running locally
 
-ES modules require a local server (won't work with `file://`):
+The JS files use `fetch()` to load the JSON — they need a local server:
 
 ```bash
-# Python
-python3 -m http.server 8080
-
-# Node
+python3 -m http.server 8080   # then open http://localhost:8080
 npx serve .
-
-# VS Code → Live Server extension
+# or VS Code → Live Server extension
 ```
 
-Open `http://localhost:8080`
+> Opening `index.html` directly as `file://` won't work (fetch is blocked).

@@ -22,13 +22,21 @@
 </header>
 
 <main class="container page-wrap">
-  <div class="page-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+  <div class="page-header"
+       style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
     <div>
-      <p class="eyebrow">22 Characters · 23 Bonds</p>
+      <p class="eyebrow">25 Characters · 23 Bonds</p>
       <h1>Soul Constellation</h1>
-      <p style="margin-top:0.4rem">Force-directed relationship graph. Drag nodes to rearrange. Hover for details.</p>
+      <p style="margin-top:0.4rem">Force-directed bond graph. Drag nodes · Hover for details.</p>
     </div>
-    <button id="reset-btn" style="padding:0.45rem 1rem;background:var(--bg-card);border:1px solid var(--border);color:var(--text-muted);border-radius:6px;cursor:pointer;font-size:0.82rem;transition:var(--transition)" onmouseover="this.style.borderColor='var(--border-hover)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Reset layout</button>
+    <button id="reset-btn"
+            style="padding:0.45rem 1rem;background:var(--bg-card);border:1px solid var(--border);
+                   color:var(--text-muted);border-radius:6px;cursor:pointer;font-size:0.82rem;
+                   transition:var(--transition)"
+            onmouseover="this.style.borderColor='var(--border-hover)';this.style.color='var(--text)'"
+            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">
+      Reset layout
+    </button>
   </div>
 
   <div id="constellation-wrap">
@@ -40,18 +48,21 @@
     </div>
   </div>
 
+  <!-- Node colour legend -->
   <div class="legend">
     <span><span class="legend-dot" style="background:#48BB78"></span>MHA</span>
     <span><span class="legend-dot" style="background:#9F7AEA"></span>Demon Slayer</span>
     <span><span class="legend-dot" style="background:#F56565"></span>MCU</span>
     <span><span class="legend-dot" style="background:#A0AEC0"></span>Family / Other</span>
     <span><span class="legend-dot" style="background:#63B3ED"></span>Faculty</span>
-    <span><span class="legend-dot" style="background:#718096"></span>Villain</span>
+    <span><span class="legend-dot" style="background:#718096"></span>Villain (OC)</span>
   </div>
 
   <!-- Bond type legend -->
   <div style="margin-top:1.5rem">
-    <h4 style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:0.7rem">Bond Types</h4>
+    <h4 style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:0.7rem">
+      Bond Types
+    </h4>
     <div style="display:flex;gap:0.8rem;flex-wrap:wrap;font-size:0.77rem;color:var(--text-muted)">
       <span style="display:flex;align-items:center;gap:0.35rem"><span style="width:20px;height:2px;background:#9F7AEA;display:inline-block"></span>Vestige Bond</span>
       <span style="display:flex;align-items:center;gap:0.35rem"><span style="width:20px;height:2px;background:#63B3ED;display:inline-block"></span>Slow-burn Romance</span>
@@ -68,129 +79,10 @@
 <footer>
   <div class="container inner">
     <span>Shared Souls · Constellation</span>
-    <span><a href="../index.html" style="color:var(--text-faint)">← Back to Overview</a></span>
+    <span><a href="../index.html" style="color:var(--text-faint)">← Overview</a></span>
   </div>
 </footer>
 
-<script type="module">
-import { CHARACTERS, RELATIONSHIPS } from '../data/characters.js';
-
-const GROUP_COLORS = { 'MHA':'#48BB78', 'Demon Slayer':'#9F7AEA', 'MCU':'#F56565', 'Family':'#A0AEC0', 'Faculty':'#63B3ED', 'MHA (OC)':'#718096' };
-const LINK_COLORS  = { vestige_bond:'#9F7AEA', romance_slowburn:'#63B3ED', romance:'#F687B3', best_friend:'#48BB78', rival_protective:'#ED8936', ally:'#68D391', family:'#A0AEC0', family_trauma:'#FC8181', nemesis:'#E53E3E', mentor:'#63B3ED', trainer:'#68D391', vestige_peer:'#B794F4', maternal:'#FEB2B2', friend_trio:'#48BB78', spiritual_parallel:'#4299E1', protective:'#F6AD55', ally_villain:'#4A5568' };
-
-const canvas  = document.getElementById('constellation-canvas');
-const tooltip = document.getElementById('node-tooltip');
-const wrapper = document.getElementById('constellation-wrap');
-let W, H, nodes, links, animId, dragging = null, dragOX = 0, dragOY = 0;
-
-function buildNodes() {
-  const chars = Object.values(CHARACTERS);
-  const cx = W / 2, cy = H / 2;
-  nodes = chars.map((char, i) => {
-    let x, y, r;
-    if (char.role === 'protagonist') { x = cx; y = cy; r = 28; }
-    else if (char.role?.includes('vestige')) {
-      const a = i * 1.8;
-      x = cx + Math.cos(a) * 140; y = cy + Math.sin(a) * 110; r = 18;
-    } else {
-      const a = (i / chars.length) * Math.PI * 2 + Math.random() * 0.4;
-      const d = 185 + Math.random() * 80;
-      x = cx + Math.cos(a) * d; y = cy + Math.sin(a) * d; r = 12;
-    }
-    return { ...char, x, y, vx: 0, vy: 0, r };
-  });
-  links = RELATIONSHIPS.map(rel => ({
-    ...rel,
-    sn: nodes.find(n => n.id === rel.source),
-    tn: nodes.find(n => n.id === rel.target),
-  })).filter(l => l.sn && l.tn);
-}
-
-function physics() {
-  const cx = W / 2, cy = H / 2;
-  nodes.forEach(n => { if (n.role !== 'protagonist') { n.vx += (cx - n.x) * 0.0018; n.vy += (cy - n.y) * 0.0018; } });
-  for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
-    const a = nodes[i], b = nodes[j], dx = a.x - b.x, dy = a.y - b.y;
-    const dist = Math.sqrt(dx*dx+dy*dy) || 0.01, min = a.r + b.r + 28;
-    if (dist < min) { const f = (min-dist)/dist*0.32; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
-  }
-  links.forEach(l => {
-    const dx = l.tn.x - l.sn.x, dy = l.tn.y - l.sn.y;
-    const dist = Math.sqrt(dx*dx+dy*dy) || 0.01, target = 120 + (10-(l.strength||5))*14;
-    const f = (dist-target)/dist*0.038;
-    l.sn.vx+=dx*f; l.sn.vy+=dy*f; l.tn.vx-=dx*f; l.tn.vy-=dy*f;
-  });
-  nodes.forEach(n => {
-    if (n === dragging) return;
-    n.vx *= 0.84; n.vy *= 0.84; n.x += n.vx; n.y += n.vy;
-    n.x = Math.max(n.r+4, Math.min(W-n.r-4, n.x));
-    n.y = Math.max(n.r+4, Math.min(H-n.r-4, n.y));
-  });
-}
-
-function draw() {
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, W, H);
-  links.forEach(l => {
-    const col = LINK_COLORS[l.type] || '#333';
-    ctx.beginPath(); ctx.moveTo(l.sn.x, l.sn.y); ctx.lineTo(l.tn.x, l.tn.y);
-    ctx.strokeStyle = col + '55'; ctx.lineWidth = Math.max(1, (l.strength||3)*0.22); ctx.stroke();
-  });
-  nodes.forEach(n => {
-    const col = GROUP_COLORS[n.fandom] || '#A0AEC0';
-    const g = ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*2.4);
-    g.addColorStop(0, col+'2a'); g.addColorStop(1,'transparent');
-    ctx.beginPath(); ctx.arc(n.x,n.y,n.r*2.4,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
-    ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
-    ctx.fillStyle = col+'BB'; ctx.fill();
-    ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.stroke();
-    ctx.fillStyle='rgba(240,235,228,0.82)';
-    ctx.font = n.role==='protagonist' ? 'bold 11px DM Sans,sans-serif' : '10px DM Sans,sans-serif';
-    ctx.textAlign='center';
-    const label = n.fandom==='MCU' ? n.name.split(' ')[0] : n.name.split(' ').pop();
-    ctx.fillText(label, n.x, n.y+n.r+13);
-  });
-}
-
-function loop() { physics(); draw(); animId = requestAnimationFrame(loop); }
-
-function resize() {
-  const rect = wrapper.getBoundingClientRect();
-  W = rect.width; H = rect.height;
-  const dpr = window.devicePixelRatio || 1;
-  canvas.width = W * dpr; canvas.height = H * dpr;
-  canvas.style.width = W+'px'; canvas.style.height = H+'px';
-  canvas.getContext('2d').scale(dpr, dpr);
-  buildNodes();
-  if (animId) cancelAnimationFrame(animId);
-  loop();
-}
-
-function getNode(mx, my) { return nodes?.find(n => { const dx=mx-n.x,dy=my-n.y; return Math.sqrt(dx*dx+dy*dy)<n.r+4; }); }
-
-canvas.addEventListener('mousemove', e => {
-  const r = canvas.getBoundingClientRect(), mx = e.clientX-r.left, my = e.clientY-r.top;
-  if (dragging) { dragging.x=mx+dragOX; dragging.y=my+dragOY; dragging.vx=0; dragging.vy=0; tooltip.style.display='none'; return; }
-  const n = getNode(mx, my);
-  if (n) {
-    document.getElementById('tt-name').textContent = n.name;
-    document.getElementById('tt-role').textContent = n.role || n.fandom || '';
-    document.getElementById('tt-desc').textContent = (n.description||'').slice(0,110)+(n.description?.length>110?'…':'');
-    let tx = mx+14, ty = my+14;
-    if (tx+215>W) tx-=220; if (ty+110>H) ty-=115;
-    tooltip.style.left=tx+'px'; tooltip.style.top=ty+'px'; tooltip.style.display='block';
-    canvas.style.cursor='pointer';
-  } else { tooltip.style.display='none'; canvas.style.cursor='grab'; }
-});
-canvas.addEventListener('mousedown', e => {
-  const r = canvas.getBoundingClientRect(), n = getNode(e.clientX-r.left, e.clientY-r.top);
-  if (n) { dragging=n; dragOX=n.x-(e.clientX-r.left); dragOY=n.y-(e.clientY-r.top); canvas.style.cursor='grabbing'; }
-});
-canvas.addEventListener('mouseup', () => { dragging=null; canvas.style.cursor='grab'; });
-canvas.addEventListener('mouseleave', () => { dragging=null; tooltip.style.display='none'; });
-document.getElementById('reset-btn').addEventListener('click', buildNodes);
-new ResizeObserver(resize).observe(wrapper);
-resize();
-</script>
+<script src="../js/constellation.js"></script>
 </body>
 </html>

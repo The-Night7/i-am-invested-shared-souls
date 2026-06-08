@@ -1,0 +1,468 @@
+[
+  {
+    "id": "momo",
+    "name": "Yaoyorozu Momo",
+    "alias": "Creati / The Everything Hero",
+    "fandom": "MHA",
+    "role": "protagonist",
+    "color": "#805AD5",
+    "first_chapter": 1,
+    "description": "The sole surviving vessel of three shared souls. Born into Tokyo's elite, Momo manifested her Quirk (Creation) at four. At ten, she began receiving vivid dream-memories from two deceased women. By twelve their vestiges could speak to her aloud. Her journey is one of prodigious intellect fused with the instincts and skills of a spy and a demon-slayer.",
+    "quirk": "Creation — can manifest any non-living object whose atomic structure she understands. Demands constant caloric intake proportional to object complexity.",
+    "fighting_style": "Vestige-enhanced combat: Insect Breathing (Shinobu), tactical spycraft (Natasha), custom staff/bladed weapons (self-created). Gains a Demon Slayer Mark during the Endless Mansion arc.",
+    "appearance": null,
+    "key_relationships": ["shinobu", "natasha", "shouto", "kyouka", "katsuki", "izuku", "giyuu", "ekaterina", "haruto", "eri"],
+    "notable_moments": [
+      { "ch": 1,  "desc": "Born; Quirk manifests at age 4 in the family library." },
+      { "ch": 3,  "desc": "Age 12 — Shinobu and Natasha manifest as visible vestiges in her bedroom." },
+      { "ch": 21, "desc": "Wins the U.A. Sports Festival First Year tournament, defeating Bakugou in the final." },
+      { "ch": 48, "desc": "First encounter with Kurohana during the Shie Hassaikai arc; fights nearly to unconsciousness." },
+      { "ch": 76, "desc": "Mother Ekaterina killed in Dabi-blue fire set by Kurohana; emotional breakdown broadcast live." },
+      { "ch": 80, "desc": "Goes rogue; fights her own classmates while unstable." },
+      { "ch": 93, "desc": "Origin chapter — meets Ekaterina's soul-echo in her mindscape; loses her left arm, later receives prosthetic." },
+      { "ch": 97, "desc": "Final chapter — trains her Demon Slayer Mark; participates in USJ rescue field trip; finds peace." }
+    ]
+  },
+  {
+    "id": "shinobu",
+    "name": "Kochou Shinobu",
+    "alias": "The Insect Hashira",
+    "fandom": "Demon Slayer",
+    "role": "vestige / mentor",
+    "color": "#9F7AEA",
+    "first_chapter": 1,
+    "description": "Former Insect Pillar of the Demon Slayer Corps. Appears in Momo's dreams from age 10, manifests visibly from age 12. Her soul-outline glows lavender-blue. Sly, teasing, and sharp-tongued but deeply caring. Uses Insect Breathing and wisteria-based poisons. Lost her elder sister Kanae to a demon before her own death.",
+    "appearance": "Petite, ~4'11½. Raven-black hair fading to deep violet, fastened in a flat yakai-maki bun with a white butterfly ornament. Gradient purple pupil-less eyes. Taisho-era Demon Slayer uniform in dark purple with gold buttons, butterfly-wing haori (white→aqua→pink). Stinger-bladed katana: tsuba is four-petal aqua flower, blade engraved with '惡鬼' (Evil Demon) and '滅殺' (Destruction).",
+    "quirk": null,
+    "fighting_style": "Insect Breathing; Total Concentration Breathing (teaches Momo). Specialises in wisteria poison injection via her needle-tipped blade. Compensates for lack of raw strength with surgical precision and speed.",
+    "key_relationships": ["momo", "natasha", "giyuu", "aizawa"],
+    "notable_moments": [
+      { "ch": 1,  "desc": "First appears in Momo's dreams at age 10 — brewing poisons in a wisteria garden." },
+      { "ch": 3,  "desc": "Manifests visibly in Momo's bedroom; introduces herself as a vestige." },
+      { "ch": 76, "desc": "Chosen to console Momo after Ekaterina's death, over Natasha." },
+      { "ch": 87, "desc": "Trains Momo in a sweltering room alongside Giyuu; her Demon Slayer Mark is fully visible." },
+      { "ch": 97, "desc": "Training continues; Mark permanently maintained. Teases Momo flat on the floor after sparring." }
+    ]
+  },
+  {
+    "id": "natasha",
+    "name": "Natasha Romanov",
+    "alias": "Black Widow",
+    "fandom": "MCU",
+    "role": "vestige / mentor",
+    "color": "#F56565",
+    "first_chapter": 2,
+    "description": "Former Black Widow and Avenger. Appears in Momo's dreams from age 11 alongside brutal combat memories and KGB-era trauma. Soul-outline glows scarlet. Dry-witted, tactically brilliant, fiercely protective. Acts as a parental figure. Uncomfortable with emotional expression — admits this openly. Ships: Natasha × Aizawa.",
+    "appearance": "Fiery red hair (copper in light), hazel eyes (green-to-brown shift), lean muscular build. Later appears as a physical teacher at U.A.",
+    "quirk": null,
+    "fighting_style": "MCU Black Widow skill set: firearms, edged weapons, hand-to-hand (Widow's Bite). Tactical analysis and espionage. Trains Momo in spycraft, threat-reading, and combat awareness.",
+    "key_relationships": ["momo", "shinobu", "aizawa", "eri"],
+    "notable_moments": [
+      { "ch": 2,  "desc": "First appears in dreams — red-haired woman with a gun, blood-soaked mission memories." },
+      { "ch": 3,  "desc": "Manifests alongside Shinobu; identified as Natasha Romanov." },
+      { "ch": 76, "desc": "Declines to console Momo directly; self-aware about her emotional limits." },
+      { "ch": 93, "desc": "Fires a critical shot saving Star and Stripe from Kurohana; vestige form is clearly fading." },
+      { "ch": 97, "desc": "Caught laughing with Aizawa — a rare moment of peace for both." }
+    ]
+  },
+  {
+    "id": "giyuu",
+    "name": "Tomioka Giyuu",
+    "alias": "The Water Hashira",
+    "fandom": "Demon Slayer",
+    "role": "supporting / vestige",
+    "color": "#4299E1",
+    "first_chapter": 1,
+    "description": "Former Water Pillar of the Demon Slayer Corps. Becomes physically present at U.A. alongside Shinobu. Reserved, near-silent. Shinobu teases him constantly. His Demon Slayer Mark (blue, water-flow patterns on left cheek/jaw) becomes permanently visible in the final arc. Spiritually paralleled with Shouto.",
+    "appearance": "Tall, stoic. Water Hashira uniform. Blue Demon Slayer Mark: flowing water patterns on left cheek and jaw, smaller mark near hairline.",
+    "quirk": null,
+    "fighting_style": "Water Breathing — ten forms. Exceptional swordsmanship. Trains Momo in 2v1 sparring sessions in extreme heat.",
+    "key_relationships": ["momo", "shinobu", "shouto"],
+    "notable_moments": [
+      { "ch": 1,  "desc": "Appears in Shinobu's early dreams — she patches his wounds and teases him." },
+      { "ch": 87, "desc": "Trains Momo with Shinobu in a sweltering room; dual 2v1 sparring with bokuto." },
+      { "ch": 93, "desc": "Re-awakens his Demon Slayer Mark during the battle with Kurohana." },
+      { "ch": 97, "desc": "Mark now permanently visible. Tells Momo 'Round two.' after she collapses." }
+    ]
+  },
+  {
+    "id": "shouto",
+    "name": "Todoroki Shouto",
+    "alias": "Shoto",
+    "fandom": "MHA",
+    "role": "love interest / core classmate",
+    "color": "#63B3ED",
+    "first_chapter": 7,
+    "description": "Seat neighbour of Momo at U.A. Son of Endeavor. Carries the trauma of his father's abuse and his mother's hospitalisation. Terrible at expressing feelings — the penultimate chapter is literally titled 'Todoroki, Do You Have Feelings for Yaomomo?'. Spiritually paralleled with Giyuu. Races to Momo's side when her home burns (Ch 76).",
+    "quirk": "Half-Cold Half-Hot — right side ice, left side fire.",
+    "fighting_style": "Ice and fire combat; increasingly integrates both sides after the Sports Festival.",
+    "appearance": null,
+    "key_relationships": ["momo", "izuku", "giyuu", "enji", "touya"],
+    "notable_moments": [
+      { "ch": 18, "desc": "Sports Festival — Momo and Midoriya's words push him to use his left side (fire) for the first time." },
+      { "ch": 20, "desc": "Awards ceremony: Momo embraces him after the podium; he stiffens but allows it." },
+      { "ch": 76, "desc": "Immediately races to Momo at the burning mansion. Ice-suppresses the flames. Holds her while she cries." },
+      { "ch": 94, "desc": "The Hellish Todoroki Family arc — Endeavor's crimes publicly confirmed." },
+      { "ch": 96, "desc": "Chapter titled: 'Todoroki, Do You Have Feelings for Yaomomo?'" }
+    ]
+  },
+  {
+    "id": "kyouka",
+    "name": "Jirou Kyouka",
+    "alias": "Earphone Jack",
+    "fandom": "MHA",
+    "role": "best friend",
+    "color": "#E53E3E",
+    "first_chapter": 7,
+    "description": "Momo's closest female friend in Class 1-A. Part of the trio tag with Kaminari. Tries to reach Momo after Ekaterina's death. Scoots over on the couch in the final chapter; immediately notices Momo's exhaustion.",
+    "quirk": "Earphone Jack — extends her earlobes as audio jacks or weapons.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo", "kaminari", "izuku"],
+    "notable_moments": [
+      { "ch": 76, "desc": "Tries to reach Momo after Ekaterina's death; met with clipped replies." },
+      { "ch": 95, "desc": "Scoots over on the couch. 'You look dead. Training again?'" },
+      { "ch": 97, "desc": "Part of the rescue team at the USJ redo field trip." }
+    ]
+  },
+  {
+    "id": "katsuki",
+    "name": "Bakugou Katsuki",
+    "alias": "Kacchan / Dynamight",
+    "fandom": "MHA",
+    "role": "rival / protective classmate",
+    "color": "#ED8936",
+    "first_chapter": 7,
+    "description": "Explosive, foul-mouthed, and fiercely proud. Loses the Sports Festival final to Momo — a defeat that fuels grudging respect. Protective in his own gruff way: 'Check your damn phone. Or tell someone before you leave.' (Ch 95). Calls Momo 'Princess' or 'Ponytail'.",
+    "quirk": "Explosion — nitroglycerin-like sweat ignites on command.",
+    "fighting_style": "Raw offensive power; increasingly strategic. Loses to Momo via her superior judo-based restraint.",
+    "appearance": null,
+    "key_relationships": ["momo", "izuku", "shouto"],
+    "notable_moments": [
+      { "ch": 21, "desc": "Loses to Momo in the Sports Festival final. Furious; demands a rematch. Midnight gasses him." },
+      { "ch": 65, "desc": "Kacchan vs Yaomomo — Joint Training arc rematch." },
+      { "ch": 95, "desc": "Scolds Momo for disappearing. 'Next time, check your damn phone. Or tell someone before you leave.'" },
+      { "ch": 97, "desc": "'You better not be overdoing it.' — gruff concern in the common room." }
+    ]
+  },
+  {
+    "id": "izuku",
+    "name": "Midoriya Izuku",
+    "alias": "Deku",
+    "fandom": "MHA",
+    "role": "core classmate",
+    "color": "#48BB78",
+    "first_chapter": 7,
+    "description": "Earnest, strategically brilliant, emotionally perceptive. Supports Momo during the Sports Festival arc. One of the first to sense something deeper happening with her. Teams up with Momo against Gentle Criminal (Ch 53).",
+    "quirk": "One For All — immense strength enhancement; still learning to control it.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo", "katsuki", "shouto", "ochako"],
+    "notable_moments": [
+      { "ch": 18, "desc": "Alongside Momo, pushes Shouto to use his left side in the Sports Festival semifinals." },
+      { "ch": 53, "desc": "Deku & Creati vs Gentle Criminal — tag-team fight." }
+    ]
+  },
+  {
+    "id": "kaminari",
+    "name": "Kaminari Denki",
+    "alias": "Chargebolt",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#F6E05E",
+    "first_chapter": 7,
+    "description": "Loud, excitable, genuine. Part of the trio tag with Momo and Jirou. Expresses his concern vocally during the Loss arc. 'She hasn't eaten or drunk anything in three days...'",
+    "quirk": "Electrification.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo", "kyouka"],
+    "notable_moments": [
+      { "ch": 76, "desc": "Voices the class's worry: 'She hasn't eaten or drunk anything in three days.'" },
+      { "ch": 97, "desc": "'You're training with both of them at once? Dude, that's insane.'" }
+    ]
+  },
+  {
+    "id": "ochako",
+    "name": "Uraraka Ochako",
+    "alias": "Uravity",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#F687B3",
+    "first_chapter": 7,
+    "description": "Warm, expressive. Notices Momo hasn't eaten for three days after the fire and voices the group's worry (Ch 76). Part of the rescue team in the final chapter USJ field trip.",
+    "quirk": "Zero Gravity.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo", "izuku"],
+    "notable_moments": [
+      { "ch": 76, "desc": "Voices the grief: 'She hasn't eaten or drunk anything in three days...'" },
+      { "ch": 97, "desc": "'Yeah. It's nice to have a normal day again.'" }
+    ]
+  },
+  {
+    "id": "iida",
+    "name": "Iida Tenya",
+    "alias": "Ingenium",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#B794F4",
+    "first_chapter": 7,
+    "description": "Rigid, principled, deeply decent. Stops Kyouka and Izuku from chasing Shouto to the burning mansion (Ch 76). Organises calling Shinobu and Natasha to Momo's side. Formal speech patterns.",
+    "quirk": "Engine — jet turbines in his calves.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 76, "desc": "Blocks Kyouka and Izuku from running to the fire: 'Let Todoroki go. We can console Yaoyorozu when she returns.'" },
+      { "ch": 76, "desc": "Organises calling Shinobu and Natasha to reach Momo." }
+    ]
+  },
+  {
+    "id": "mina",
+    "name": "Ashido Mina",
+    "alias": "Pinky",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#FC8181",
+    "first_chapter": 7,
+    "description": "Bubbly, energetic. Waves Momo over in the final chapter the moment she walks in. 'Yaomomo! Finally! We saved you a plate!'",
+    "quirk": "Acid.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 97, "desc": "'Yaomomo! Finally! We saved you a plate!'" }
+    ]
+  },
+  {
+    "id": "hanta",
+    "name": "Sero Hanta",
+    "alias": "Cellophane",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#68D391",
+    "first_chapter": 7,
+    "description": "The vocal worrier of the friend group. His line in Ch 95 is one of the most emotionally resonant in the final arc: 'You absolute dumbass, you can't just disappear like that!'",
+    "quirk": "Tape — dispenses adhesive tape from his elbows.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 95, "desc": "'You absolute dumbass, you can't just disappear like that!'" }
+    ]
+  },
+  {
+    "id": "shinsou",
+    "name": "Shinsou Hitoshi",
+    "alias": "Mindjack",
+    "fandom": "MHA",
+    "role": "classmate",
+    "color": "#A0AEC0",
+    "first_chapter": 60,
+    "description": "Transfers into the Hero Course after the Joint Training arc. Dry humour in the final chapter: 'And try not to get fooled by whoever Bakugou's pretending to be.'",
+    "quirk": "Brainwashing — controls anyone who verbally responds to him.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 97, "desc": "'And try not to get fooled by whoever Bakugou's pretending to be.'" }
+    ]
+  },
+  {
+    "id": "aizawa",
+    "name": "Aizawa Shouta",
+    "alias": "Eraserhead",
+    "fandom": "MHA",
+    "role": "faculty",
+    "color": "#4A5568",
+    "first_chapter": 7,
+    "description": "Class 1-A homeroom teacher. Dry, pragmatic, effective. Ships: Aizawa × Natasha — caught laughing together in Ch 97, 'both at the same time felt like she'd stepped into an alternate dimension'.",
+    "quirk": "Erasure — erases any non-mutant Quirk by looking at the user.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["natasha", "momo"],
+    "notable_moments": [
+      { "ch": 97, "desc": "Caught laughing with Natasha. A rare sight. Both immediately try to look composed." }
+    ]
+  },
+  {
+    "id": "enji",
+    "name": "Todoroki Enji",
+    "alias": "Endeavor",
+    "fandom": "MHA",
+    "role": "antagonist (systemic)",
+    "color": "#E53E3E",
+    "first_chapter": 22,
+    "description": "Former Number One Hero; abusive father. Exposed and publicly charged with child abuse and domestic violence in the Justice Saga. Retires; Hawks takes the Number One position.",
+    "quirk": "Hellflame.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["shouto", "touya"],
+    "notable_moments": [
+      { "ch": 94, "desc": "Charges of child abuse and domestic violence publicly confirmed; retires." }
+    ]
+  },
+  {
+    "id": "touya",
+    "name": "Todoroki Touya",
+    "alias": "Dabi",
+    "fandom": "MHA",
+    "role": "villain",
+    "color": "#63B3ED",
+    "first_chapter": 57,
+    "description": "Eldest Todoroki son, presumed dead, became the villain Dabi. His blue flames burn the Yaoyorozu mansion in Ch 76 as part of his collaboration with Kurohana. Unmasked publicly in 'Dabi's Dance' (Ch 57).",
+    "quirk": "Blueflame — cremation fire inherited from his father, unstable in his own body.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["shouto", "enji", "kurohana"],
+    "notable_moments": [
+      { "ch": 57, "desc": "Dabi's Dance — publicly unmasked as Todoroki Touya." },
+      { "ch": 76, "desc": "Blue flames set to the Yaoyorozu mansion on Kurohana's behalf, killing Ekaterina." }
+    ]
+  },
+  {
+    "id": "hawks",
+    "name": "Takami Keigo",
+    "alias": "Hawks",
+    "fandom": "MHA",
+    "role": "pro hero",
+    "color": "#F6AD55",
+    "first_chapter": 55,
+    "description": "Number Two Hero; inherits the Number One position after Endeavor retires. Announced as new Number One in Ch 97.",
+    "quirk": "Fierce Wings.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": [],
+    "notable_moments": [
+      { "ch": 97, "desc": "Formally announced as the new Number One Hero on live broadcast." }
+    ]
+  },
+  {
+    "id": "lady_nagant",
+    "name": "Tsutsumi Kaina",
+    "alias": "Lady Nagant",
+    "fandom": "MHA",
+    "role": "reformed villain",
+    "color": "#9F7AEA",
+    "first_chapter": 77,
+    "description": "Former villainous assassin. Granted a full pardon in Ch 97 and appointed new President of the Hero Public Safety Commission — replacing a corrupt administration. A symbol of institutional reform.",
+    "quirk": "Rifle — sniper arm.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": [],
+    "notable_moments": [
+      { "ch": 77, "desc": "Introduced in the Rogue Heroine arc." },
+      { "ch": 97, "desc": "Pardoned and appointed HPSC President; systemic corruption exposed." }
+    ]
+  },
+  {
+    "id": "eri",
+    "name": "Eri",
+    "alias": null,
+    "fandom": "MHA",
+    "role": "child ward",
+    "color": "#CBD5E0",
+    "first_chapter": 44,
+    "description": "Child rescued during the Shie Hassaikai arc. Natasha has a notably warm dynamic with her — Shinobu: 'You've got more of a soft side than you admit.' Natasha: 'Being good with little kids doesn't mean I'll be good at consoling a grieving teenager.'",
+    "quirk": "Rewind — reverse a living being's biological state.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["natasha", "momo"],
+    "notable_moments": [
+      { "ch": 44, "desc": "First appearance — Trio Meets... (Shie Hassaikai arc)." },
+      { "ch": 49, "desc": "Rescued at the end of the Shie Hassaikai arc." }
+    ]
+  },
+  {
+    "id": "setsuna",
+    "name": "Tokage Setsuna",
+    "alias": null,
+    "fandom": "MHA",
+    "role": "rival / Class 1-B",
+    "color": "#68D391",
+    "first_chapter": 23,
+    "description": "Class 1-B student and Momo's co-intern during the Hero Killer arc. Sharp, competitive, genuinely likeable. Chapter 23: 'Bizarre! Tokage Setsuna Appears.' Trades playful competitive banter with Momo throughout their internship.",
+    "quirk": "Lizard Tail Splitter — detaches and remotely controls up to 50 body part pieces.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 23, "desc": "Introduced as Momo's co-intern. 'So you're the big winner from Class A, huh?'" }
+    ]
+  },
+  {
+    "id": "ekaterina",
+    "name": "Yaoyorozu Ekaterina",
+    "alias": "Momo's mother",
+    "fandom": "MHA",
+    "role": "family / deceased",
+    "color": "#FEB2B2",
+    "first_chapter": 1,
+    "description": "Born in Saint Petersburg; name means 'pure'. Striking: pale skin, sharp cheekbones, amber eyes. Fiercely protective, quick to laugh, dramatically affectionate — Russian endearments abound. Killed in Ch 76 when Kurohana orchestrates Dabi setting the Yaoyorozu mansion ablaze. Her soul-echo appears to Momo in the mindscape during Ch 93.",
+    "quirk": null,
+    "fighting_style": null,
+    "appearance": "Pale skin, sharp cheekbones, amber eyes. Born in Saint Petersburg. Elegant and formidable.",
+    "key_relationships": ["momo", "haruto"],
+    "notable_moments": [
+      { "ch": 1,  "desc": "Introduced — sweeps infant Momo into her arms at the first sign of any scrape." },
+      { "ch": 76, "desc": "Killed when Dabi burns the Yaoyorozu mansion on Kurohana's orders." },
+      { "ch": 93, "desc": "Soul-echo appears in Momo's mindscape: 'You are my pride. My joy. My brilliant, brave daughter.'" }
+    ]
+  },
+  {
+    "id": "haruto",
+    "name": "Yaoyorozu Haruto",
+    "alias": "Momo's father",
+    "fandom": "MHA",
+    "role": "family",
+    "color": "#BEE3F8",
+    "first_chapter": 1,
+    "description": "Tall, composed, reserved warmth. Reads to Momo every night as a child. On a business trip abroad when the mansion burns — spared by distance. Returns on the first flight.",
+    "quirk": null,
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo", "ekaterina"],
+    "notable_moments": [
+      { "ch": 1,  "desc": "Described: reads to Momo every night; quietly proud of her intellect." },
+      { "ch": 76, "desc": "Away on business trip when the mansion burns; returns immediately." }
+    ]
+  },
+  {
+    "id": "kurohana",
+    "name": "Kurohana",
+    "alias": "The Compass Villain",
+    "fandom": "MHA (OC)",
+    "role": "main antagonist",
+    "color": "#718096",
+    "first_chapter": 47,
+    "description": "Original character villain. Entire body coated in living black sludge-armour. Black sclera, glowing white pupils, permanent predatory fangs. Tattered kimono fused with hardened sludge plates. Black hair streaked with independently-moving sludge. Obsessed with Momo — kills Ekaterina to isolate her. Defeated in Ch 93.",
+    "quirk": "Sludge Armour + Compass Technique — a black-to-white blooming lotus pattern that reads all nearby Fighting Spirits, predicting movements with near-perfect accuracy.",
+    "fighting_style": "Sludge tendrils for offense and armor. Compass technique for perfect prediction and counterattack. Prefers drawn-out fights; savors her opponents.",
+    "appearance": "Body coated in black sludge-armour. Black sclera with glowing white pupils. Permanent fangs. Tattered kimono fused with sludge plates. Black hair with independently moving sludge streaks.",
+    "key_relationships": ["momo", "touya"],
+    "notable_moments": [
+      { "ch": 47, "desc": "First appearance — sitting on a throne of corpses, demanding Momo's name." },
+      { "ch": 48, "desc": "Crushes Momo's left hand; defeats her and leaves her for dead." },
+      { "ch": 76, "desc": "Orchestrates Ekaterina's murder via Dabi's Blueflame as psychological warfare." },
+      { "ch": 93, "desc": "Final battle; Compass active — fights Star and Stripe, Shouto, Katsuki, Giyuu, and Natasha simultaneously. Defeated." }
+    ]
+  },
+  {
+    "id": "star_and_stripe",
+    "name": "Cathleen Bate",
+    "alias": "Star and Stripe",
+    "fandom": "MHA",
+    "role": "allied pro hero",
+    "color": "#F6AD55",
+    "first_chapter": 71,
+    "description": "USA Number One Hero. Appears in the World Heroes' Mission arc (Ch 71–75) and the Endless Mansion arc (Ch 86–94). Kurohana specifically targets her in the final battle (Ch 93).",
+    "quirk": "New Order — imposes rules on anything she touches and names.",
+    "fighting_style": null,
+    "appearance": null,
+    "key_relationships": ["momo"],
+    "notable_moments": [
+      { "ch": 71, "desc": "Introduced in the World Heroes' Mission arc." },
+      { "ch": 93, "desc": "Targeted by Kurohana; Natasha fires the shot that saves her." }
+    ]
+  }
+]

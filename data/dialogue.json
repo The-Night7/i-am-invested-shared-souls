@@ -1,0 +1,156 @@
+[
+  {
+    "ch": 3,
+    "speaker": "shinobu",
+    "text": "We're vestiges — fragments of who we were, tied to your soul. You carry us with you, whether you realize it or not.",
+    "context": "Ch 3 — First visible appearance, Momo's bedroom",
+    "mood": "warm"
+  },
+  {
+    "ch": 3,
+    "speaker": "natasha",
+    "text": "Think of us as echoes. We're not alive, not in the way you are. But we're real enough to guide you. To protect you, if necessary.",
+    "context": "Ch 3 — First visible appearance",
+    "mood": "calm"
+  },
+  {
+    "ch": 3,
+    "speaker": "shinobu",
+    "text": "You are us. And we are you. Three separate lives, one connected soul.",
+    "context": "Ch 3 — Explaining the vestige bond",
+    "mood": "profound"
+  },
+  {
+    "ch": 3,
+    "speaker": "shinobu",
+    "text": "We haunt you now.",
+    "context": "Ch 3 — Introducing herself to Momo",
+    "mood": "teasing"
+  },
+  {
+    "ch": 3,
+    "speaker": "natasha",
+    "text": "Don't word it like that.",
+    "context": "Ch 3 — Reacting to Shinobu's phrasing",
+    "mood": "dry"
+  },
+  {
+    "ch": 21,
+    "speaker": "momo",
+    "text": "I had no intention of holding back.",
+    "context": "Ch 21 — Sports Festival final, to Bakugou",
+    "mood": "determined"
+  },
+  {
+    "ch": 21,
+    "speaker": "allMight",
+    "text": "Your intelligence, adaptability, and composure are remarkable. I believe you will one day become one of the greatest Heroes of your generation.",
+    "context": "Ch 21 — Sports Festival awards ceremony",
+    "mood": "warm"
+  },
+  {
+    "ch": 21,
+    "speaker": "momo",
+    "text": "You're amazing, Todoroki. And you'll be a great Hero — separate from your father's legacy.",
+    "context": "Ch 21 — Post-ceremony, to Shouto",
+    "mood": "warm"
+  },
+  {
+    "ch": 47,
+    "speaker": "kurohana",
+    "text": "Another challenger? I do hope you won't be as much of a bore as the ones before you.",
+    "context": "Ch 47 — First encounter, sitting on a throne of corpses",
+    "mood": "menacing"
+  },
+  {
+    "ch": 48,
+    "speaker": "momo",
+    "text": "I'm The Everything Hero: Creati.",
+    "context": "Ch 48 — Refusing to give Kurohana her real name",
+    "mood": "defiant"
+  },
+  {
+    "ch": 76,
+    "speaker": "natasha",
+    "text": "You should handle this one, Shinobu. Comfort and speeches aren't really my thing. I'm not good at that.",
+    "context": "Ch 76 — After Ekaterina's death; choosing not to go to Momo",
+    "mood": "self-aware"
+  },
+  {
+    "ch": 76,
+    "speaker": "shinobu",
+    "text": "You know, Momo sees you as a mother figure more than me. We're both her mentors, but she looks at you differently.",
+    "context": "Ch 76 — To Natasha",
+    "mood": "perceptive"
+  },
+  {
+    "ch": 76,
+    "speaker": "natasha",
+    "text": "Being good with little kids doesn't mean I'll be good at consoling a grieving teenager. I understand what Momo's going through, logically. But responding to emotions the right way? That's not my strength.",
+    "context": "Ch 76 — To Shinobu, self-reflecting",
+    "mood": "honest"
+  },
+  {
+    "ch": 93,
+    "speaker": "ekaterina",
+    "text": "You are my pride. My joy. My brilliant, brave daughter.",
+    "context": "Ch 93 — Ekaterina's soul-echo in Momo's mindscape",
+    "mood": "profound"
+  },
+  {
+    "ch": 93,
+    "speaker": "ekaterina",
+    "text": "You've carried so much pain. So much responsibility. And yet you kept moving. You kept fighting, kept caring. That is strength, Momo. That is who you are.",
+    "context": "Ch 93 — Mindscape; Ekaterina holds a broken Momo",
+    "mood": "profound"
+  },
+  {
+    "ch": 93,
+    "speaker": "ekaterina",
+    "text": "Now, my love… stand up. You still have something left to do.",
+    "context": "Ch 93 — Ekaterina sends Momo back to the fight",
+    "mood": "warm"
+  },
+  {
+    "ch": 95,
+    "speaker": "hanta",
+    "text": "You absolute dumbass, you can't just disappear like that!",
+    "context": "Ch 95 — Momo returns after visiting the grave alone",
+    "mood": "protective"
+  },
+  {
+    "ch": 95,
+    "speaker": "momo",
+    "text": "I was visiting my mother's grave. For the first time.",
+    "context": "Ch 95 — To the class",
+    "mood": "raw"
+  },
+  {
+    "ch": 95,
+    "speaker": "katsuki",
+    "text": "Next time, check your damn phone. Or tell someone before you leave.",
+    "context": "Ch 95 — Bakugou, barely hiding his relief",
+    "mood": "protective"
+  },
+  {
+    "ch": 97,
+    "speaker": "shinobu",
+    "text": "Done already?",
+    "context": "Ch 97 — Momo flat on the floor after brutal sparring",
+    "mood": "teasing"
+  },
+  {
+    "ch": 97,
+    "speaker": "katsuki",
+    "text": "You better not be overdoing it.",
+    "context": "Ch 97 — Common room, checking on Momo",
+    "mood": "protective"
+  },
+  {
+    "ch": 97,
+    "speaker": "narrator",
+    "text": "For the first time in a long while, she felt like a teenager again.",
+    "context": "Ch 97 — Final chapter; common room after the field trip",
+    "mood": "peaceful"
+  }
+]
