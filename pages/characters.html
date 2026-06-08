@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared Souls — Characters</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="characters">
+
+<header id="site-header">
+  <div class="container inner">
+    <a href="../index.html" class="brand">✦ Shared Souls</a>
+    <nav>
+      <a href="../index.html">Overview</a>
+      <a href="characters.html" class="active">Characters</a>
+      <a href="arcs.html">Arc Log</a>
+      <a href="constellation.html">Constellation</a>
+      <a href="echoes.html">Echoes</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Character detail panel -->
+<aside id="char-detail">
+  <button class="detail-close" id="detail-close">✕</button>
+  <div id="detail-content"></div>
+</aside>
+
+<main class="container page-wrap">
+  <div class="page-header">
+    <p class="eyebrow">Cast · 22 profiles</p>
+    <h1>Characters</h1>
+    <p>Full profiles for every major character — appearance, Quirk, key moments, and relationships. Click any card to expand.</p>
+  </div>
+
+  <div class="filter-bar" id="char-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="protagonist">Protagonist</button>
+    <button data-filter="vestige">Vestiges</button>
+    <button data-filter="MHA">MHA</button>
+    <button data-filter="Demon Slayer">Demon Slayer</button>
+    <button data-filter="MCU">MCU</button>
+    <button data-filter="villain">Villain</button>
+    <button data-filter="family">Family</button>
+  </div>
+
+  <div class="char-grid" id="char-grid"></div>
+</main>
+
+<footer>
+  <div class="container inner">
+    <span>Shared Souls · Characters</span>
+    <span><a href="../index.html" style="color:var(--text-faint)">← Back to Overview</a></span>
+  </div>
+</footer>
+
+<script type="module">
+import { CHARACTERS } from '../data/characters.js';
+
+const ROLE_LABEL = {
+  'protagonist': 'Protagonist',
+  'vestige / mentor': 'Vestige / Mentor',
+  'supporting / physical presence': 'Supporting',
+  'love interest / core classmate': 'Love Interest',
+  'best friend': 'Best Friend',
+  'rival / protective classmate': 'Rival / Protective',
+  'core classmate': 'Core Classmate',
+  'classmate': 'Classmate',
+  'faculty / romantic subplot': 'Faculty',
+  'main antagonist': 'Main Antagonist',
+  'family / deceased': 'Family (Deceased)',
+  'family': 'Family',
+  'pro hero / supporting': 'Pro Hero',
+  'reformed villain / system-changer': 'Pro Hero',
+  'allied pro hero': 'Allied Pro Hero',
+  'child ward / symbol of hope': 'Child Ward',
+  'rival / class 1-b': 'Rival / Class 1-B',
+  'antagonist (systemic) / shouto\'s father': 'Villain (Systemic)',
+  'villain / shouto\'s brother': 'Villain',
+  'trainer': 'Trainer',
+  'mentor': 'Mentor',
+};
+const FANDOM_TAG = {
+  'MHA':          '<span class="tag tag-mha">MHA</span>',
+  'Demon Slayer': '<span class="tag tag-ds">Demon Slayer</span>',
+  'MCU':          '<span class="tag tag-mcu">MCU</span>',
+  'MHA (OC)':     '<span class="tag tag-oc">OC</span>',
+};
+const SPEAKER_COLORS = { momo:'#805AD5', shinobu:'#9F7AEA', natasha:'#F56565', ekaterina:'#FEB2B2', katsuki:'#ED8936', hanta:'#68D391', kurohana:'#4A5568', allMight:'#F6AD55', narrator:'#A0AEC0' };
+
+function buildCards(filter) {
+  const grid = document.getElementById('char-grid');
+  grid.innerHTML = '';
+  Object.values(CHARACTERS).forEach(char => {
+    if (filter !== 'all') {
+      const fMatch = char.fandom === filter || char.fandom === `${filter} (OC)`;
+      const rMatch = char.role && char.role.toLowerCase().includes(filter.toLowerCase());
+      if (!fMatch && !rMatch) return;
+    }
+    const card = document.createElement('div');
+    card.className = 'char-card';
+    card.style.setProperty('--char-color', char.color || '#9F7AEA');
+    card.innerHTML = `
+      <div class="char-name">${char.name}</div>
+      ${char.alias ? `<div class="char-alias">${char.alias}</div>` : ''}
+      <div class="char-role">${ROLE_LABEL[char.role?.toLowerCase()] || char.role || ''}</div>
+      <div class="char-desc">${char.description || ''}</div>
+      <div class="char-tags">
+        ${FANDOM_TAG[char.fandom] || ''}
+        ${char.first_chapter ? `<span class="tag" style="background:rgba(255,255,255,0.05);color:var(--text-faint)">Ch ${char.first_chapter}+</span>` : ''}
+      </div>`;
+    card.addEventListener('click', () => openDetail(char));
+    grid.appendChild(card);
+  });
+}
+
+function openDetail(char) {
+  const relHTML = (char.key_relationships || []).map(id => {
+    const r = CHARACTERS[id];
+    return r ? `<span style="display:inline-block;margin:0.2rem 0.25rem;padding:0.2rem 0.55rem;background:var(--bg-hover);border:1px solid var(--border);border-radius:4px;font-size:0.75rem;color:var(--text-muted)">${r.name}</span>` : '';
+  }).join('');
+  const momHTML = (char.notable_moments || []).map(m =>
+    `<li><span class="ch-badge">Ch ${m.ch}</span><span>${m.desc}</span></li>`
+  ).join('');
+
+  document.getElementById('detail-content').innerHTML = `
+    <div style="margin-bottom:0.4rem;margin-top:0.2rem">${FANDOM_TAG[char.fandom] || ''}</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;margin-bottom:0.15rem;color:${char.color || 'var(--text)'}">${char.name}</h2>
+    ${char.alias ? `<div style="font-style:italic;color:var(--text-muted);font-size:0.88rem;margin-bottom:0.7rem">${char.alias}</div>` : ''}
+    <div style="font-size:0.63rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-faint);margin-bottom:1.2rem">${ROLE_LABEL[char.role?.toLowerCase()] || char.role || ''}</div>
+    ${char.description ? `<div class="detail-section"><h4>About</h4><p style="font-size:0.85rem">${char.description}</p></div>` : ''}
+    ${char.appearance ? `<div class="detail-section"><h4>Appearance</h4><p style="font-size:0.85rem">${char.appearance}</p></div>` : ''}
+    ${char.quirk ? `<div class="detail-section"><h4>Quirk</h4><p style="font-size:0.85rem">${char.quirk}</p></div>` : ''}
+    ${char.fighting_style ? `<div class="detail-section"><h4>Fighting Style</h4><p style="font-size:0.85rem">${char.fighting_style}</p></div>` : ''}
+    ${relHTML ? `<div class="detail-section"><h4>Key Relationships</h4><div style="margin-top:0.2rem">${relHTML}</div></div>` : ''}
+    ${momHTML ? `<div class="detail-section"><h4>Notable Moments</h4><ul class="moment-list">${momHTML}</ul></div>` : ''}
+  `;
+  document.getElementById('char-detail').classList.add('open');
+}
+
+document.getElementById('detail-close').addEventListener('click', () => {
+  document.getElementById('char-detail').classList.remove('open');
+});
+document.getElementById('char-filters').querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#char-filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildCards(btn.dataset.filter);
+  });
+});
+
+buildCards('all');
+</script>
+</body>
+</html>
